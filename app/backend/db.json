@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "asdf@naver.ocm",
+      "password": "$2a$08$.syQsCjbBNZmZa9TQKi/le051UyXVJ4VyZWD.w5UgTVGzRiAvcWp.",
+      "name": "asdfsad",
+      "role": "mentee",
+      "bio": "",
+      "image": "",
+      "skills": []
+    },
+    {
+      "id": 2,
+      "email": "test@naver.com",
+      "password": "$2a$08$gOSN8Y828OZNGLuJwACVMeEOF43Umz2w6hV.9hdAv6qvazB7i0MVK",
+      "name": "test",
+      "role": "mentee",
+      "bio": "hello222",
+      "image": "2.png",
+      "skills": []
+    },
+    {
+      "id": 3,
+      "email": "mentor1@example.com",
+      "password": "",
+      "name": "김앞단",
+      "role": "mentor",
+      "bio": "프론트엔드 멘토",
+      "image": "",
+      "skills": [
+        "React",
+        "Vue"
+      ]
+    },
+    {
+      "id": 4,
+      "email": "mentor2@example.com",
+      "password": "",
+      "name": "이뒷단",
+      "role": "mentor",
+      "bio": "백엔드 멘토",
+      "image": "",
+      "skills": [
+        "Spring Boot",
+        "FastAPI"
+      ]
+    },
+    {
+      "id": 5,
+      "email": "mentor3@example.com",
+      "password": "",
+      "name": "박풀스택",
+      "role": "mentor",
+      "bio": "풀스택 멘토",
+      "image": "",
+      "skills": [
+        "Node.js",
+        "React",
+        "MongoDB"
+      ]
+    }
+  ],
+  "matchRequests": [
+    {
+      "id": 1,
+      "mentorId": 3,
+      "menteeId": 2,
+      "message": "멘토링 요청합니다!",
+      "status": "pending"
+    }
+  ]
+}

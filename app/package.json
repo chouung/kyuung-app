@@ -1,0 +1,12 @@
+{
+  "name": "app",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "backend": "yarn workspace backend start",
+    "frontend": "yarn workspace frontend start"
+  }
+}
