@@ -10,6 +10,9 @@ import { JSONFile } from 'lowdb/node'
 import jwt from 'jsonwebtoken'
 import bcrypt from 'bcryptjs'
 import fs from 'fs'
+import swaggerUi from 'swagger-ui-express'
+import YAML from 'yamljs'
+import path from 'path'
 const app = express()
 const PORT = process.env.PORT || 8080
 const JWT_SECRET = process.env.JWT_SECRET || 'secret'
@@ -236,6 +239,13 @@ app.use('/api', apiRouter)
 
 app.get('/', (req, res) => {
   res.redirect('/api')
+})
+
+const swaggerPath = path.resolve(__dirname, '../../openapi.yaml')
+const swaggerDocument = YAML.load(swaggerPath)
+app.use('/swagger-ui', swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+app.get('/v3/api-docs', (req, res) => {
+  res.sendFile('openapi.yaml', { root: path.resolve(__dirname, '../../') })
 })
 
 app.listen(PORT, () => {
